@@ -158,7 +158,7 @@
       let w=+document.getElementById("tsumo").value;
       if(w<0)return alert("受け取る人を選択してください");
       let o=[0,1,2].filter(i=>i!==w);
-      apply([[w,v],[o[0],-v],[o[1],-v]],`ツモ ${state.names[w]} +${v} / ${state.names[o[0]]}, ${state.names[o[1]]} 各-${v}`);
+      apply([[w, v * 2],[o[0], -v],[o[1], -v]], `ツモ ${state.names[w]} +${v * 2} / ${state.names[o[0]]}, ${state.names[o[1]]} 各-${v}`);
     }
 
     function tsumoCustom(){
